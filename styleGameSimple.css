@@ -1,0 +1,98 @@
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Conteiner */
+.conteiner {
+	width: 100%;
+	height: 100%;
+	max-width: 1470px;
+	padding: 0 15px;
+	margin: 0 auto;
+	background-image: url(images/Background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+}
+
+/*Section*/
+.section {
+	width: 100%;
+}
+.section__images {
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	margin-top: 340px;
+	margin-bottom: 340px;
+}
+.image__card1, .image__card2, .image__card3 {
+	background-image: url(images/Перевернутая_карта.png);
+	background-repeat: no-repeat;
+	width: 218px;
+	height: 341px;
+	backface-visibility: hidden;
+}
+.image__card1, .image__card2 {
+	margin-right: 24px;
+}
+.image__card1:hover,
+.image__card2:hover,
+.image__card3:hover {
+	transform: translateY(-20px) rotate(-3.08deg);
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+	transition: .3s ease-in-out;
+	cursor: pointer;
+}
+.winner__card {
+	transform: rotateY(180deg) scale(-1, 1);
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	background-image: url(images/Карта_с_багом_2.png);
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	width: 218px;
+	height: 341px;
+}
+.loser__card {
+	transform: rotateY(180deg) scale(-1, 1);
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	background-image: url(images/Конец_игры.jpg);
+	border-radius: 10px;
+	width: 218px;
+	height: 341px;
+	margin-right: 24px;
+}
+.winner__card:hover,
+.loser__card:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 775px) {
+	.section__images {
+		display: block;
+		margin-top: 240px;
+		margin-bottom: 240px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.image__card1, .image__card2, .loser__card {
+		margin-right: 0;
+		margin-bottom: 24px;
+	}
+	.image__card1, .image__card2, .image__card3, .winner__card, .loser__card {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+
